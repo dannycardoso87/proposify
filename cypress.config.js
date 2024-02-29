@@ -11,7 +11,7 @@ module.exports = defineConfig({
     requestTimeout: 10000,
     video: true,
   },
-  chromeWebSecurity: false,
+  //chromeWebSecurity: false,
   projectId: 'gnfx4b',
   experimentalWebKitSupport: true,
 })
