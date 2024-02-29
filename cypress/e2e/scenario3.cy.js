@@ -7,7 +7,8 @@ require('@4tw/cypress-drag-drop')
 
 describe('Scenario3', () => {
   it('scenario3', () => {
-    cy.guiLoginProposify()
+		cy.sessionLoginProposify()
+		cy.visit('/onboard_checklist')
     const nameDocument = 'Document3'
     cy.createDocument(nameDocument)
     //Click on Signatures Tab

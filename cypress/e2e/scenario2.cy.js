@@ -3,7 +3,8 @@
 
 describe('Scenario2', () => {
   it('scenario2', () => {
-    cy.guiLoginProposify()
+		cy.sessionLoginProposify()
+		cy.visit('/onboard_checklist')
     const nameDocument = 'Document2'
     cy.createDocument(nameDocument)
 

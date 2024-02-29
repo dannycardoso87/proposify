@@ -23,7 +23,6 @@ Cypress.Commands.add('sessionLoginProposify', (
 ) => {
   const login = () => cy.guiLoginProposify(username, password)
   cy.session(username, login)
-  //save the session
 })
 
 Cypress.Commands.add('createDocument', (nameDocument) => {

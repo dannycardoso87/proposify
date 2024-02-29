@@ -1,7 +1,8 @@
 /* eslint-disable linebreak-style */
 describe('Scenario1', () => {
 	it('scenario1', () => {
-		cy.guiLoginProposify()
+		cy.sessionLoginProposify()
+		cy.visit('/onboard_checklist')
 		const nameDocument = 'Document1'
 		cy.createDocument(nameDocument)
 
