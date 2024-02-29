@@ -13,5 +13,5 @@ module.exports = defineConfig({
     requestTimeout: 6000,
     video: true,
   },
-  projectId: 'h14e78',
+  projectId: 'gnfx4b',
 })

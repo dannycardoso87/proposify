@@ -1,4 +1,6 @@
 /* eslint-disable linebreak-style */
+/* eslint-disable cypress/no-unnecessary-waiting */
+/* eslint-disable linebreak-style */
 /* eslint-disable indent */
 import '@4tw/cypress-drag-drop'
 require('@4tw/cypress-drag-drop')
@@ -35,6 +37,7 @@ Cypress.Commands.add('createDocument', (nameDocument) => {
     .should('include.text', 'Saved')
   cy.contains('div[aria-labelledby="rc-tabs-1-tab-document_tab"]', 'Coming soon...')
     .should('be.visible')
+  cy.wait(3000)
   cy.get('input.document-title')
     .clear()
   cy.get('input.document-title')
