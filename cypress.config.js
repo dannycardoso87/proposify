@@ -3,15 +3,15 @@
 const { defineConfig } = require('cypress')
 
 module.exports = defineConfig({
-  chromeWebSecurity: false,
+  // viewportHeight: 880,
+  // viewportWidth: 1280,
   e2e: {
     baseUrl: 'https://app.proposify.com',
-    env: {
-      viewportWidthBreakpoint: 768,
-    },
     defaultCommandTimeout: 6000,
     requestTimeout: 6000,
     video: true,
   },
+  chromeWebSecurity: false,
   projectId: 'gnfx4b',
+  experimentalWebKitSupport: true,
 })
