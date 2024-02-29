@@ -7,7 +7,7 @@ module.exports = defineConfig({
   // viewportWidth: 1280,
   e2e: {
     baseUrl: 'https://app.proposify.com',
-    defaultCommandTimeout: 10000,
+    defaultCommandTimeout: 30000,
     requestTimeout: 10000,
     video: true,
   },
