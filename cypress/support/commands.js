@@ -31,6 +31,8 @@ Cypress.Commands.add('createDocument', (nameDocument) => {
     .should('be.visible')
     .click()
   cy.get('[data-testid="create-document-button"]')
+    .should('be.visible')
+  cy.get('[data-testid="create-document-button"]')
     .click()
   cy.get('div.ant-typography.proposify-typography.default-font.size-sm.timestamp-ml-xs')
     .should('be.visible')
