@@ -44,6 +44,11 @@ Cypress.Commands.add('createDocument', (nameDocument) => {
     .clear()
   cy.get('input.document-title')
     .type(nameDocument)
+  cy.get('div[data-node-key="signatures_tab"]')
+    .click()
+  cy.get('div.ant-typography.proposify-typography.default-font.size-sm.timestamp-ml-xs')
+    .should('be.visible')
+    .should('include.text', 'Saved')
 })
 
 Cypress.Commands.add('deleteDocument', (nameDocument) => {
@@ -62,4 +67,12 @@ Cypress.Commands.add('emptyTrash', () => {
     .click()
   cy.get('.ant-list-empty-text')
     .should('have.text', 'No items in Trash')
+})
+
+Cypress.Commands.add('uploadImage', (image) => {
+  cy.get('[type="file"]')
+    .selectFile(image, {force:true})
+  cy.get('.ant-notification-notice-message')
+    .should('be.visible')
+    .should('contain', 'Good news! Your upload worked! Check the image library to see for yourself.')
 })

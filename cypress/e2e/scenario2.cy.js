@@ -17,18 +17,12 @@ describe('Scenario2', () => {
       .click()
 
     //Upload first image
-    cy.get('[type="file"]')
-      .selectFile('cypress/fixtures/Logo.png', {force:true})
-    cy.get('.ant-notification-notice-message')
-      .should('be.visible')
-      .should('contain', 'Good news! Your upload worked! Check the image library to see for yourself.')
+    const image1 = 'cypress/fixtures/Logo.png'
+    cy.uploadImage(image1)
 
     //Upload second image
-    cy.get('[type="file"]')
-      .selectFile('cypress/fixtures/Proposify.png', {force:true})
-    cy.get('.ant-notification-notice-message')
-      .should('be.visible')
-      .should('contain', 'Good news! Your upload worked! Check the image library to see for yourself.')
+    const image2 = 'cypress/fixtures/Proposify.png'
+    cy.uploadImage(image2)
 
     //Check if the 2 images were uploaded
     cy.get('.MuiImageListItem-img')
