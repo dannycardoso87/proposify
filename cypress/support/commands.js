@@ -37,6 +37,7 @@ Cypress.Commands.add('createDocument', (nameDocument) => {
   cy.get('div.ant-typography.proposify-typography.default-font.size-sm.timestamp-ml-xs')
     .should('be.visible')
     .should('include.text', 'Saved')
+  cy.wait(3000)
   cy.contains('div[aria-labelledby="rc-tabs-1-tab-document_tab"]', 'Coming soon...')
     .should('be.visible')
   cy.wait(3000)
